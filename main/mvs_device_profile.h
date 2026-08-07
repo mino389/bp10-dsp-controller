@@ -183,10 +183,10 @@ typedef enum {
 // A800X-Festprofil-Definition
 // ---------------------------------------------------------------------------
 
-#define MVS_A800X_PROFILE                                    \
+#define MVS_A800x_PROFILE                                    \
     ((mvs_device_profile_t){                                 \
         .valid = true,                                       \
-        .kind = MVS_DEVICE_A800X_FIXED,                      \
+        .kind = MVS_DEVICE_A800x_FIXED,                      \
         .vid = 0x8888, .pid = 0x171E, .usb_interface = 0,    \
         .catalog_discovered = false,                          \
         .catalog_count = 0,                                   \
@@ -195,13 +195,13 @@ typedef enum {
             [MVS_PATH_MUSIC] = {                             \
                 .present = true, .label = "Music",            \
                 .path_id = MVS_PATH_MUSIC,                    \
-                .noise_suppressor = { .available = true, .effect_id = 0x88 }, \
+                .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
                 .silence_detector = { .available = true, .effect_id = 0x89 }, \
-                .virtual_bass = { .available = true, .effect_id = 0x97 },     \
-                .virtual_bass_classic = { .available = true, .effect_id = 0x98 }, \
-                .preeq = { .available = true, .effect_id = 0x99 },            \
-                .drc = { .available = true, .effect_id = 0x9A, .state_size = 54 }, \
-                .phase = { .available = true, .effect_id = 0x96, .state_size = 4 }, \
+                .virtual_bass = { .available = true, .effect_id = 0x96 },     \
+                .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
+                .preeq = { .available = true, .effect_id = 0x9F },            \
+                .drc = { .available = true, .effect_id = 0x9C, .state_size = 54 }, \
+                .phase = { .available = true, .effect_id = 0x9B, .state_size = 4 }, \
                 .delay_hq = { .available = false },                           \
                 .usb_out_gain = { .available = false },                       \
                 .out_eq = { .available = false },                             \
@@ -214,13 +214,13 @@ typedef enum {
                 .drc_schema = MVS_DRC_SCHEMA_A800X_4PATH,           \
             },                                                              \
         },                                                                  \
-        .noise_suppressor = { .available = true, .effect_id = 0x88 }, \
+        .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
         .silence_detector = { .available = true, .effect_id = 0x89 }, \
-        .virtual_bass = { .available = true, .effect_id = 0x97 },     \
-        .virtual_bass_classic = { .available = true, .effect_id = 0x98 }, \
-        .preeq = { .available = true, .effect_id = 0x99 },            \
-        .drc = { .available = true, .effect_id = 0x9A, .state_size = 54 }, \
-        .phase = { .available = true, .effect_id = 0x96, .state_size = 4 }, \
+        .virtual_bass = { .available = true, .effect_id = 0x96 },     \
+        .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
+        .preeq = { .available = true, .effect_id = 0x9F },            \
+        .drc = { .available = true, .effect_id = 0x9C, .state_size = 54 }, \
+        .phase = { .available = true, .effect_id = 0x9B, .state_size = 4 }, \
         .delay_hq = { .available = false },                            \
         .usb_out_gain = { .available = false },                        \
         .has_virtual_bass_classic = true,                              \
