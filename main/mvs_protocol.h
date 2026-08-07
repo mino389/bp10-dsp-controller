@@ -43,12 +43,12 @@ extern "C" {
 #define MVS_CATALOG_MAX_EFFECTS   64
 
 // A800X-Effekt-IDs (fest)
-#define MVS_EFFECT_NOISE_SUPPRESSOR  0x88
+#define MVS_EFFECT_NOISE_SUPPRESSOR  0x81
 #define MVS_EFFECT_SILENCE_DETECTOR  0x89
-#define MVS_EFFECT_VIRTUAL_BASS      0x97
-#define MVS_EFFECT_PREEQ             0x99
-#define MVS_EFFECT_DRC               0x9A
-#define MVS_EFFECT_PHASE             0x96
+#define MVS_EFFECT_VIRTUAL_BASS      0x96
+#define MVS_EFFECT_PREEQ             0x9F
+#define MVS_EFFECT_DRC               0x9C
+#define MVS_EFFECT_PHASE             0x9B
 #define MVS_EFFECT_TAG               0xFC
 #define MVS_EFFECT_SAVE              0xFD
 
@@ -120,7 +120,7 @@ typedef struct {
     uint16_t pregain_raw[4];   // Q4.12 coefficient
 } mvs_drc_paths_t;
 
-// DRC-State (0x9A) — A800X 4-Pfad, 54 Byte
+// DRC-State (0x9C) — A800X 4-Pfad, 54 Byte
 typedef struct __attribute__((packed)) {
     uint16_t enabled;
     uint16_t mode;             // 0 = Full Band, 1-4 = Multiband
