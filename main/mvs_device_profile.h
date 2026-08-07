@@ -183,10 +183,10 @@ typedef enum {
 // A800X-Festprofil-Definition
 // ---------------------------------------------------------------------------
 
-#define MVS_A800x_PROFILE                                    \
+#define MVS_A800X_PROFILE                                    \
     ((mvs_device_profile_t){                                 \
         .valid = true,                                       \
-        .kind = MVS_DEVICE_A800x_FIXED,                      \
+        .kind = MVS_DEVICE_A800X_FIXED,                      \
         .vid = 0x8888, .pid = 0x171E, .usb_interface = 0,    \
         .catalog_discovered = false,                          \
         .catalog_count = 0,                                   \
