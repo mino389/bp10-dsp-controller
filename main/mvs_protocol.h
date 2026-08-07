@@ -44,7 +44,7 @@ extern "C" {
 
 // A800X-Effekt-IDs (fest)
 #define MVS_EFFECT_NOISE_SUPPRESSOR  0x81
-#define MVS_EFFECT_SILENCE_DETECTOR  0x89
+#define MVS_EFFECT_SILENCE_DETECTOR  0x9A
 #define MVS_EFFECT_VIRTUAL_BASS      0x96
 #define MVS_EFFECT_PREEQ             0x9F
 #define MVS_EFFECT_DRC               0x9C
