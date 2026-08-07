@@ -196,7 +196,7 @@ typedef enum {
                 .present = true, .label = "Music",            \
                 .path_id = MVS_PATH_MUSIC,                    \
                 .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
-                .silence_detector = { .available = true, .effect_id = 0x89 }, \
+                .silence_detector = { .available = true, .effect_id = 0x9A }, \
                 .virtual_bass = { .available = true, .effect_id = 0x96 },     \
                 .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
                 .preeq = { .available = true, .effect_id = 0x9F },            \
@@ -215,7 +215,7 @@ typedef enum {
             },                                                              \
         },                                                                  \
         .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
-        .silence_detector = { .available = true, .effect_id = 0x89 }, \
+        .silence_detector = { .available = true, .effect_id = 0x9A }, \
         .virtual_bass = { .available = true, .effect_id = 0x96 },     \
         .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
         .preeq = { .available = true, .effect_id = 0x9F },            \
