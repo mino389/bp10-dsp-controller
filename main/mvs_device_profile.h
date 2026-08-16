@@ -196,12 +196,12 @@ typedef enum {
                 .present = true, .label = "Music",            \
                 .path_id = MVS_PATH_MUSIC,                    \
                 .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
-                .silence_detector = { .available = true, .effect_id = 0x9A }, \
+                .silence_detector = { .available = true, .effect_id = 0x86 }, \
                 .virtual_bass = { .available = true, .effect_id = 0x96 },     \
                 .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
                 .preeq = { .available = true, .effect_id = 0x9F },            \
-                .drc = { .available = true, .effect_id = 0x9C, .state_size = 54 }, \
-                .phase = { .available = true, .effect_id = 0x9B, .state_size = 4 }, \
+                .drc = { .available = true, .effect_id = 0x9C }, \
+                .phase = { .available = true, .effect_id = 0x98 }, \
                 .delay_hq = { .available = false },                           \
                 .usb_out_gain = { .available = false },                       \
                 .out_eq = { .available = false },                             \
@@ -215,12 +215,12 @@ typedef enum {
             },                                                              \
         },                                                                  \
         .noise_suppressor = { .available = true, .effect_id = 0x81 }, \
-        .silence_detector = { .available = true, .effect_id = 0x9A }, \
+        .silence_detector = { .available = true, .effect_id = 0x86 }, \
         .virtual_bass = { .available = true, .effect_id = 0x96 },     \
         .virtual_bass_classic = { .available = true, .effect_id = 0x97 }, \
         .preeq = { .available = true, .effect_id = 0x9F },            \
-        .drc = { .available = true, .effect_id = 0x9C, .state_size = 54 }, \
-        .phase = { .available = true, .effect_id = 0x9B, .state_size = 4 }, \
+        .drc = { .available = true, .effect_id = 0x9C }, \
+        .phase = { .available = true, .effect_id = 0x98 }, \
         .delay_hq = { .available = false },                            \
         .usb_out_gain = { .available = false },                        \
         .has_virtual_bass_classic = true,                              \
