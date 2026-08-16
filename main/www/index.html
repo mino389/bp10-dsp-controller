@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>BP10 DSP Controller</title>
+<title>HOPESTAR A80 DSP Controller</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101719'/%3E%3Cpath d='M14 39h8l5-22 9 34 6-24 4 12h5' fill='none' stroke='%23a8ff35' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css?v=7">
 </head>
 <body>
 <header>
-  <h1>BP10 DSP Controller</h1>
+  <h1>HOPESTAR A80 DSP Controller</h1>
   <div id="status-bar">
     <span id="dsp-status" class="status-dot dot-off">DSP ✗</span>
     <span id="wifi-status" class="status-dot dot-off">-</span>
@@ -36,46 +36,46 @@
     </div>
     <div class="control-grid">
       <details class="module-card" id="noise-module">
-        <summary><span>Noise Suppressor</span><span id="noise-state" class="module-state">NOT READ</span></summary>
+        <summary><span>Khử Nhiễu</span><span id="noise-state" class="module-state">NOT READ</span></summary>
         <div class="module-editor">
-          <label class="switch-row"><span><strong>Enabled</strong></span><input type="checkbox" id="noise-suppressor"><span class="switch"></span></label>
+          <label class="switch-row"><span><strong>Kích hoạt</strong></span><input type="checkbox" id="noise-suppressor"><span class="switch"></span></label>
           <div class="parameter-grid dsp-param-grid">
-            <label class="field"><span>Threshold (dB)</span><input type="number" id="noise-threshold" step="0.01"></label>
-            <label class="field"><span>Ratio</span><input type="number" id="noise-ratio" step="1"></label>
-            <label class="field"><span>Attack (ms)</span><input type="number" id="noise-attack" step="1"></label>
-            <label class="field"><span>Release (ms)</span><input type="number" id="noise-release" step="1"></label>
+            <label class="field"><span>Ngưỡng (dB)</span><input type="number" id="noise-threshold" step="0.01"></label>
+            <label class="field"><span>Tỉ lệ</span><input type="number" id="noise-ratio" step="1"></label>
+            <label class="field"><span>Tác động (ms)</span><input type="number" id="noise-attack" step="1"></label>
+            <label class="field"><span>Kết thúc (ms)</span><input type="number" id="noise-release" step="1"></label>
           </div>
-          <div class="form-actions"><button id="btn-noise-read" class="btn btn-secondary">Load Factory Values</button><button id="btn-noise-apply" class="btn btn-primary">Apply</button><span id="noise-message" class="form-message"></span></div>
+          <div class="form-actions"><button id="btn-noise-read" class="btn btn-secondary">Đưa về mặc định</button><button id="btn-noise-apply" class="btn btn-primary">Áp dụng</button><span id="noise-message" class="form-message"></span></div>
         </div>
       </details>
       <details class="module-card" id="bass-module">
-        <summary><span>Virtual Bass</span><span id="bass-state" class="module-state">NOT READ</span></summary>
+        <summary><span>Âm Trầm Ảo</span><span id="bass-state" class="module-state">NOT READ</span></summary>
         <div class="module-editor">
-          <label class="switch-row"><span><strong>Enabled</strong></span><input type="checkbox" id="virtual-bass"><span class="switch"></span></label>
+          <label class="switch-row"><span><strong>Kích hoạt</strong></span><input type="checkbox" id="virtual-bass"><span class="switch"></span></label>
           <div class="parameter-grid dsp-param-grid">
-            <label class="field"><span>Cutoff (Hz)</span><input type="number" id="bass-cutoff" step="1"></label>
-            <label class="field"><span>Intensity (%)</span><input type="number" id="bass-intensity" step="1"></label>
+            <label class="field"><span>Tần số cắt (Hz)</span><input type="number" id="bass-cutoff" step="1"></label>
+            <label class="field"><span>Cường độ (%)</span><input type="number" id="bass-intensity" step="1"></label>
           </div>
-          <label class="switch-row"><span><strong>BassEnhanced</strong></span><input type="checkbox" id="bass-enhanced"><span class="switch"></span></label>
-          <div class="form-actions"><button id="btn-bass-read" class="btn btn-secondary">Load Factory Values</button><button id="btn-bass-apply" class="btn btn-primary">Apply</button><span id="bass-message" class="form-message"></span></div>
+          <label class="switch-row"><span><strong>Tăng âm trầm</strong></span><input type="checkbox" id="bass-enhanced"><span class="switch"></span></label>
+          <div class="form-actions"><button id="btn-bass-read" class="btn btn-secondary">Đưa về mặc định</button><button id="btn-bass-apply" class="btn btn-primary">Áp dụng</button><span id="bass-message" class="form-message"></span></div>
         </div>
       </details>
       <details class="module-card hidden" id="vb-classic-module">
-        <summary><span>Virtual Bass Classic</span><span id="vb-classic-state" class="module-state">NOT READ</span></summary>
+        <summary><span>Âm Trầm Ảo Cơ bản</span><span id="vb-classic-state" class="module-state">NOT READ</span></summary>
         <div class="module-editor">
-          <label class="switch-row"><span><strong>Enabled</strong></span><input type="checkbox" id="vb-classic-enable"><span class="switch"></span></label>
+          <label class="switch-row"><span><strong>Kích hoạt</strong></span><input type="checkbox" id="vb-classic-enable"><span class="switch"></span></label>
           <div class="parameter-grid dsp-param-grid">
-            <label class="field"><span>Cutoff (Hz)</span><input type="number" id="vb-classic-cutoff" min="0" max="65535" step="1"></label>
-            <label class="field"><span>Intensity (%)</span><input type="number" id="vb-classic-intensity" min="0" max="65535" step="1"></label>
+            <label class="field"><span>Tần số cắt (Hz)</span><input type="number" id="vb-classic-cutoff" min="0" max="65535" step="1"></label>
+            <label class="field"><span>Cường độ (%)</span><input type="number" id="vb-classic-intensity" min="0" max="65535" step="1"></label>
           </div>
-          <div class="form-actions"><button id="btn-vb-classic-read" class="btn btn-secondary">Load Factory Values</button><button id="btn-vb-classic-apply" class="btn btn-primary">Apply</button><span id="vb-classic-message" class="form-message"></span></div>
+          <div class="form-actions"><button id="btn-vb-classic-read" class="btn btn-secondary">Đưa về mặc định</button><button id="btn-vb-classic-apply" class="btn btn-primary">Áp dụng</button><span id="vb-classic-message" class="form-message"></span></div>
         </div>
       </details>
       <details class="module-card hidden" id="phase-module">
-        <summary><span>Phase</span><span id="phase-state" class="module-state">NOT READ</span></summary>
+        <summary><span>Âm Thanh Nổi</span><span id="phase-state" class="module-state">NOT READ</span></summary>
         <div class="module-editor">
-          <label class="switch-row"><span><strong>Invert phase</strong></span><input type="checkbox" id="phase-invert"><span class="switch"></span></label>
-          <div class="form-actions"><button id="btn-phase-read" class="btn btn-secondary">Load Factory Values</button><button id="btn-phase-apply" class="btn btn-primary">Apply</button><span id="phase-message" class="form-message"></span></div>
+          <label class="switch-row"><span><strong>Kích hoạt</strong></span><input type="checkbox" id="phase-invert"><span class="switch"></span></label>
+          <div class="form-actions"><button id="btn-phase-read" class="btn btn-secondary">Đưa về mặc định</button><button id="btn-phase-apply" class="btn btn-primary">Áp dụng</button><span id="phase-message" class="form-message"></span></div>
         </div>
       </details>
       <details class="module-card hidden" id="delay-module">
@@ -88,10 +88,10 @@
         </div>
       </details>
       <details class="module-card" id="silence-module">
-        <summary><span>Silence Detector</span><span id="silence-state" class="module-state">NOT READ</span></summary>
+        <summary><span>Mic Auto Tune</span><span id="silence-state" class="module-state">NOT READ</span></summary>
         <div class="module-editor">
-          <label class="switch-row"><span><strong>Enabled</strong></span><input type="checkbox" id="silence-detector" disabled><span class="switch"></span></label>
-          <div class="form-actions"><button id="btn-silence-read" class="btn btn-secondary" disabled>Load Factory Values</button><button id="btn-silence-apply" class="btn btn-primary" disabled>Apply</button><span id="silence-message" class="form-message"></span></div>
+          <label class="switch-row"><span><strong>Kích hoạt</strong></span><input type="checkbox" id="silence-detector" disabled><span class="switch"></span></label>
+          <div class="form-actions"><button id="btn-silence-read" class="btn btn-secondary" disabled>Đưa về mặc định</button><button id="btn-silence-apply" class="btn btn-primary" disabled>Áp dụng</button><span id="silence-message" class="form-message"></span></div>
         </div>
       </details>
       <details class="module-card module-card-wide" id="preeq-module">
@@ -269,12 +269,6 @@
 
     <!-- Result -->
     <div class="hidden" id="ota-result"></div>
-  </section>
-
-  <!-- Factory Reset -->
-  <section id="factory-reset">
-    <h2>Factory Reset</h2>
-    <button id="btn-factory-reset" class="btn btn-danger">Reset</button>
   </section>
 </main>
 
