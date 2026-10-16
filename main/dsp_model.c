@@ -229,37 +229,37 @@ bool dsp_model_get_default_profile(dsp_profile_t *profile)
     }
 
     profile->noise_suppressor_enabled = true;
-    profile->noise_suppressor_threshold_raw = -5500;
-    profile->noise_suppressor_ratio = 4;
-    profile->noise_suppressor_attack_ms = 2;
+    profile->noise_suppressor_threshold_raw = -6500;
+    profile->noise_suppressor_ratio = 2;
+    profile->noise_suppressor_attack_ms = 1;
     profile->noise_suppressor_release_ms = 100;
-    profile->silence_detector_enabled = true;
+    profile->silence_detector_enabled = false;
     profile->virtual_bass_enabled = true;
-    profile->virtual_bass_cutoff_hz = 42;
+    profile->virtual_bass_cutoff_hz = 55;
     profile->virtual_bass_intensity_pct = 4;
-    profile->virtual_bass_enhanced = true;
+    profile->virtual_bass_enhanced = false;
 
     profile->preeq.block_enabled = true;
     profile->preeq.pre_gain_raw = 0;
     profile->preeq.selected_filter = 0;
-    profile->preeq.filters[0].enabled = 1; profile->preeq.filters[0].type = MVS_FILTER_LP;
-    profile->preeq.filters[0].frequency_hz = 280; profile->preeq.filters[0].q_raw = 1229;
+    profile->preeq.filters[0].enabled = 1; profile->preeq.filters[0].type = MVS_FILTER_PK;
+    profile->preeq.filters[0].frequency_hz = 100; profile->preeq.filters[0].q_raw = 707;
     profile->preeq.filters[0].gain_raw = 0;
-    profile->preeq.filters[1].enabled = 1; profile->preeq.filters[1].type = MVS_FILTER_LP;
-    profile->preeq.filters[1].frequency_hz = 500; profile->preeq.filters[1].q_raw = 724;
+    profile->preeq.filters[1].enabled = 1; profile->preeq.filters[1].type = MVS_FILTER_PK;
+    profile->preeq.filters[1].frequency_hz = 2000; profile->preeq.filters[1].q_raw = 707;
     profile->preeq.filters[1].gain_raw = 0;
-    profile->preeq.filters[2].enabled = 1; profile->preeq.filters[2].type = MVS_FILTER_HP;
-    profile->preeq.filters[2].frequency_hz = 35; profile->preeq.filters[2].q_raw = 819;
+    profile->preeq.filters[2].enabled = 0; profile->preeq.filters[2].type = MVS_FILTER_PK;
+    profile->preeq.filters[2].frequency_hz = 5000; profile->preeq.filters[2].q_raw = 707;
     profile->preeq.filters[2].gain_raw = 0;
-    profile->preeq.filters[3].enabled = 1; profile->preeq.filters[3].type = MVS_FILTER_PK;
-    profile->preeq.filters[3].frequency_hz = 55; profile->preeq.filters[3].q_raw = 3584;
-    profile->preeq.filters[3].gain_raw = 384;
-    profile->preeq.filters[4].enabled = 1; profile->preeq.filters[4].type = MVS_FILTER_PK;
-    profile->preeq.filters[4].frequency_hz = 85; profile->preeq.filters[4].q_raw = 3584;
-    profile->preeq.filters[4].gain_raw = 384;
+    profile->preeq.filters[3].enabled = 0; profile->preeq.filters[3].type = MVS_FILTER_PK;
+    profile->preeq.filters[3].frequency_hz = 10000; profile->preeq.filters[3].q_raw = 707;
+    profile->preeq.filters[3].gain_raw = 0;
+    profile->preeq.filters[4].enabled = 0; profile->preeq.filters[4].type = MVS_FILTER_PK;
+    profile->preeq.filters[4].frequency_hz = 20000; profile->preeq.filters[4].q_raw = 707;
+    profile->preeq.filters[4].gain_raw = 0;
     for (int i = 5; i < 10; i++) {
         profile->preeq.filters[i].enabled = 0; profile->preeq.filters[i].type = MVS_FILTER_PK;
-        profile->preeq.filters[i].frequency_hz = 20000; profile->preeq.filters[i].q_raw = 724;
+        profile->preeq.filters[i].frequency_hz = 20000; profile->preeq.filters[i].q_raw = 707;
         profile->preeq.filters[i].gain_raw = 0;
     }
     profile->drc.enabled = true; profile->drc.mode = 0;
