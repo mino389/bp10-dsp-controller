@@ -614,7 +614,7 @@ void wifi_manager_generate_hostname(char *hostname, size_t max_len)
 
     // Letzte 2 Bytes der MAC als hex: "bp10-xxxx"
     snprintf(hostname, max_len, "%s-%02x%02x",
-             CONFIG_BP10_MDNS_DEFAULT_HOSTNAME,
+             HOPESTAR-DSP,
              mac[4], mac[5]);
 
     // Für spätere Referenz speichern
