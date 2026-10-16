@@ -243,23 +243,23 @@ bool dsp_model_get_default_profile(dsp_profile_t *profile)
     profile->preeq.pre_gain_raw = 0;
     profile->preeq.selected_filter = 0;
     profile->preeq.filters[0].enabled = 1; profile->preeq.filters[0].type = MVS_FILTER_PK;
-    profile->preeq.filters[0].frequency_hz = 100; profile->preeq.filters[0].q_raw = 707;
+    profile->preeq.filters[0].frequency_hz = 100; profile->preeq.filters[0].q_raw = 724;
     profile->preeq.filters[0].gain_raw = 0;
     profile->preeq.filters[1].enabled = 1; profile->preeq.filters[1].type = MVS_FILTER_PK;
-    profile->preeq.filters[1].frequency_hz = 2000; profile->preeq.filters[1].q_raw = 707;
+    profile->preeq.filters[1].frequency_hz = 2000; profile->preeq.filters[1].q_raw = 724;
     profile->preeq.filters[1].gain_raw = 0;
     profile->preeq.filters[2].enabled = 0; profile->preeq.filters[2].type = MVS_FILTER_PK;
-    profile->preeq.filters[2].frequency_hz = 5000; profile->preeq.filters[2].q_raw = 707;
+    profile->preeq.filters[2].frequency_hz = 5000; profile->preeq.filters[2].q_raw = 724;
     profile->preeq.filters[2].gain_raw = 0;
     profile->preeq.filters[3].enabled = 0; profile->preeq.filters[3].type = MVS_FILTER_PK;
-    profile->preeq.filters[3].frequency_hz = 10000; profile->preeq.filters[3].q_raw = 707;
+    profile->preeq.filters[3].frequency_hz = 10000; profile->preeq.filters[3].q_raw = 724;
     profile->preeq.filters[3].gain_raw = 0;
     profile->preeq.filters[4].enabled = 0; profile->preeq.filters[4].type = MVS_FILTER_PK;
-    profile->preeq.filters[4].frequency_hz = 20000; profile->preeq.filters[4].q_raw = 707;
+    profile->preeq.filters[4].frequency_hz = 20000; profile->preeq.filters[4].q_raw = 724;
     profile->preeq.filters[4].gain_raw = 0;
     for (int i = 5; i < 10; i++) {
         profile->preeq.filters[i].enabled = 0; profile->preeq.filters[i].type = MVS_FILTER_PK;
-        profile->preeq.filters[i].frequency_hz = 20000; profile->preeq.filters[i].q_raw = 707;
+        profile->preeq.filters[i].frequency_hz = 20000; profile->preeq.filters[i].q_raw = 724;
         profile->preeq.filters[i].gain_raw = 0;
     }
     profile->drc.enabled = true; profile->drc.mode = 0;
