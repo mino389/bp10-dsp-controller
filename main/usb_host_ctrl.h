@@ -51,6 +51,12 @@ typedef struct {
 #define MVS_TRANSPORT_A800X \
     ((mvs_usb_transport_t){ \
         .kind = MVS_USB_PROFILE_A800X, \
+        .vid = 0x8888, .pid = 0x171F, \
+        .interface_number = 0, .report_size = 256 })
+
+#define MVS_TRANSPORT_HOPESTAR_A80 \
+    ((mvs_usb_transport_t){ \
+        .kind = MVS_USB_PROFILE_GENERIC_CLASSIC, \
         .vid = 0x8888, .pid = 0x171E, \
         .interface_number = 0, .report_size = 256 })
 
