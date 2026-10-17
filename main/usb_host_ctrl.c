@@ -70,6 +70,10 @@ static int s_xfer_actual = 0;
 static mvs_usb_transport_t select_transport_profile(uint16_t vid, uint16_t pid)
 {
     mvs_usb_transport_t transport;
+    if (vid == 0x8888 && pid == 0x171E) {
+        transport = MVS_TRANSPORT_HOPESTAR_A80;
+        return transport;
+    }
     if (usb_host_ctrl_select_transport(vid, pid, &transport)) return transport;
     return transport;
 }
